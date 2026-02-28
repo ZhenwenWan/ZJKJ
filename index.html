@@ -1,110 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zhenwen Wan - Personal Website</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>紫金科技007</title>
 
-    <!-- Auto-redirect after video ends -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const video = document.querySelector('.simulation-video');
-            if (video) {
-                video.addEventListener('ended', () => {
-                    window.location.href = "Projects/HemoDyn/";
-                });
-            }
-        });
-    </script>
+  <!-- Reuse your existing styling/background -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Optional: keep icons available (same as your index.html pattern) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
-    <div class="container">
-        <!-- Left Static Section -->
-        <aside class="left-panel">
-            <h1 class="fade-in">Zhenwen Wan</h1>
-            <h2 class="fade-in">Computational Scientist & Algorithm Developer</h2>
-            <p class="fade-in">CFD-based Multiphyscs modelling, FEM, ML and optimization.</p>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                </ul>
-            </nav>
+  <div class="container">
+    <!-- Left Static Section -->
+    <aside class="left-panel">
+      <h1 class="fade-in">紫金科技007</h1>
+      <h2 class="fade-in">宁波故事 · 系列时代画卷</h2>
+      <p class="fade-in">
+        科技战暗流涌动，各路势力缤纷杂陈，波谲云诡。<br />
+        每个人的参与、见证、倾诉，终将串连出系列时代画卷。
+      </p>
 
-            <!-- Social Icons -->
-            <div class="social-icons">
-                <a href="https://github.com/ZhenwenWan" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/zhenwen-wan-13958a75/" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="mailto:aw4wzw@gmail.com">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </div>
+      <nav>
+        <ul>
+          <li><a href="#preface">序</a></li>
+          <li><a href="#main">正文</a></li>
+          <li><a href="#scope">范围</a></li>
+        </ul>
+      </nav>
 
-            <footer class="footer">
-                <p>&copy; 2025 Zhenwen Wan. All rights reserved.</p>
-            </footer>
-        </aside>
+      <!-- Social Icons (optional placeholders; edit or remove) -->
+      <div class="social-icons">
+        <a href="#" aria-label="Home" title="Home"><i class="fas fa-house"></i></a>
+        <a href="#main" aria-label="Read" title="Read"><i class="fas fa-book-open"></i></a>
+        <a href="#scope" aria-label="Scope" title="Scope"><i class="fas fa-map"></i></a>
+      </div>
 
-        <!-- Scrollable Right Section -->
-        <main class="right-content">
-            <section id="about" class="section">
-                <h2> </h2>
-                <img src="PictureID.png" alt="Profile Picture">
-                <p>Senior CFD and multiphysics simulation expert with over 30 years of experience combining scientific research and industrial software development. Spent more than two decades in oceanographic CFD and multiphysics modeling, developing strong capabilities in model innovation, verification, and large-scale numerical simulation, with dozens of co-authored peer-reviewed publications.</p>
-		<p>In recent years, transitioned to independent commercial development, delivering remote CFD- and FEM-based software projects across domains. Experienced in applying CFD both directly and indirectly to complex application scenarios, including HemoDyn, a prototype framework integrating hemodynamic CFD with machine learning to support clinical effect assessment and reduce experimental and clinical sample demands.</p>
-                <p>Strong focus on AI-assisted engineering workflows. Developed BSMesher, an industrial-grade meshing tool, from scratch within four months by effectively navigating AI assistants—demonstrating the ability to rapidly deliver high-complexity engineering software by combining physics-based modeling, AI, and efficient execution.</p>
-<p><a href="CV/index.html" class="highlight-link">More...</a></p>
-            </section>
-            <section id="experience" class="section">
-                <h2>Experience</h2>
-                <ul>
-                    <li>Founder, MySim Digital Technology ApS, China and Denmark (2017 ~ )</li>
-                    <li>Research Scientist, Danish Meteorological Institute (2007 - 2016)</li>
-                    <li>Associate Professor, Xiamen University (2004 - 2007)</li>
-                </ul>
-            </section>
-            <section id="projects" class="section">
-                <h2>Projects</h2>
-                <ul>
-                    <li><a href="Projects/HemoDyn/index.html" class="highlight-link">HemoDyn</a> - Hemodynamic CFD Simulation Platform</li>
-                    <p>HemoDyn aims to simulate blood flow and physiological dynamics for boosting bioengineering development and assessing the effects of medical intervention. The preliminary goal is to reduce the sample size in clinical trials for LEAO. Oxygen concentration in leg muscles is the selected bioinfo for measuring the severity of LEAO. ML is employed to map oxygen with functional index, e.g. walk distance. Oxygen comes from a physiological model which connects a vascular hemodynamics model. The hemodynamics model is driven by pulse data from wearable devices, e.g. Apple Watch, while assimilating other data, like readings from a toe-tip oximeter. The hemodynaimcs model is solved by the 1D ROM solver of SimVascular. The physiological model of oxgen allows for transport, transmembrane exchange and muscular consumption, and it is solved by multiple solvers from Elmer Multiphysics. VTK is used to animate model results. An API to access pulse data from wearable devices and functionalities to faciliate machine learning is being developed. <a href="Projects/HemoDyn/index.html" class="highlight-link">More...</a></p>
-                    <video controls class="simulation-video">
-                        <source src="HemoDyn_video.mp4" type="video/mp4">
-                    </video>
-                    <li><a href="Projects/PINN/index.html" class="highlight-link">PINNs</a> - Inverse Modeling with Physics-Informed Neural Networks</li>
-                    <p>This project implements a hybrid neural network and physics solver to recover hidden physical parameters from noisy observations. It demonstrates the effectiveness of physics-informed machine learning for reduced-order modeling in biomedical contexts. <a href="Projects/PINN/index.html" class="highlight-link">More...</a></p>
-                    <video controls class="simulation-video">
-                        <source src="PINN_video.mp4" type="video/mp4">
-                    </video>
-                    <li><a href="Projects/EML/index.html" class="highlight-link">EML</a> - High Frequency Electromagnetic Wave Simulator</li>
-		    <p>Aimed to reproduce Ansys HFSS benchmark cases. <a href="Projects/EML/index.html" class="highlight-link">More...</a></p> 
-                    <a href="Projects/EML/">
-                        <img src="EML_Symbolic.png" alt="EML picture">
-                    </a>
-                    <li><a href="Projects/MySim/index.html" class="highlight-link">MySim</a> - Multiphysics Simulator</li>
-		    <p>Aimed to reproduce COMSOL benchmark cases. <a href="Projects/MySim/index.html" class="highlight-link">More...</a></p>
-                    <a href="Projects/MySim/">
-                        <img src="MySim_Symbolic.png" alt="MySim picture">
-                    </a>
-                    <li><a href="Projects/BSMesher/index.html" class="highlight-link">BSMesher</a> - B-Spline Surface Meshing Tool</li>
-		    <p>An industrial-grade meshing tool specialized for B-Spline surfaces. <a href="Projects/BSMesher/index.html" class="highlight-link">More...</a></p>
-                    <a href="Projects/BSMesher/">
-                        <img src="BSMesher_Symbolic.png" alt="BSMesher picture">
-                    </a>
-                </ul>
-            </section>
-        </main>
-    </div>
+      <footer class="footer">
+        <p>&copy; 2026 紫金科技007. All rights reserved.</p>
+      </footer>
+    </aside>
+
+    <!-- Scrollable Right Section -->
+    <main class="right-content">
+      <section id="preface" class="section">
+        <h2>序</h2>
+        <p>
+          紫金科技007
+        </p>
+      </section>
+
+      <section id="main" class="section">
+        <h2>正文</h2>
+        <p>
+          科技战暗流涌动，各路势力缤纷杂陈，波谲云诡。<br />
+          每个人的参与、见证、倾诉，终将串连出系列时代画卷。
+        </p>
+      </section>
+
+      <section id="scope" class="section">
+        <h2>范围</h2>
+        <p>
+          目前主要围绕我在宁波的故事。
+        </p>
+      </section>
+    </main>
+  </div>
 </body>
 
 </html>
