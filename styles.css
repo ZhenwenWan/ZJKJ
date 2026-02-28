@@ -1,46 +1,43 @@
-/* ===== Full-width layout overrides ===== */
+/* ===== Full width layout only (background unchanged) ===== */
+
+.container.full-width-layout {
+    display: block;
+}
+
+/* Hide left panel completely */
 .left-panel {
     display: none !important;
 }
 
-/* Make the "right" content full width */
+/* Make content full width */
 .right-content.full-width {
     width: 100%;
     margin-left: 0;
-    height: auto;           /* allow natural page height */
+    height: auto;
     min-height: 100vh;
-    overflow-y: visible;    /* let browser handle scrolling */
+    overflow-y: visible;
     box-sizing: border-box;
 }
 
-/* Optional: keep content readable on wide screens */
-.right-content.full-width .section,
-.right-content.full-width .page-header {
+/* Keep readable width on large screens */
+.page-header,
+.section {
     max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* Top nav (simple inline links) */
+/* Simple navigation styling */
 .top-nav {
     margin-top: 16px;
     display: flex;
     gap: 20px;
-    flex-wrap: wrap;
 }
 
 .top-nav a {
     text-decoration: none;
-    color: #64ffda;
-    font-size: 18px;
 }
 
 .top-nav a:hover {
-    color: #ffffff;
     text-decoration: underline;
-}
-
-/* Header spacing */
-.page-header {
-    margin-bottom: 40px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
